@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int n,*p,i,sum=0;
+    printf("enter the total no. of elements ");
+    scanf("%d",&n);
+    p=(int*)malloc(n*sizeof(int));
+    if(p==NULL)
+    {
+        printf("memory not allocated\n");
+        exit(0);
+    }
+    printf("Enter the elements ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",(p+i));
+    }
+    printf("Displaying  the elements \n");
+    for(i=0;i<n;i++)
+    {
+
+        sum=sum+*(p+i);
+
+    }
+ printf("Sum of %d elements is %d\t",n,sum);
+        free(p);
+}
+
+
+
